@@ -1,0 +1,24 @@
+.custom-tab {
+    color: #586069;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-top: 1px solid lightgrey !important;
+    border-left: 1px solid lightgrey !important;
+    border-right: 1px solid lightgrey !important;
+    border-bottom: 0px solid lightgrey !important;
+    background-color: black;
+    padding: 12px !important;
+    font-family: "system-ui";
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+.custom-tab--selected {
+    color: black;
+    background-color: #f7f7f7;
+    box-shadow: 0px 0px 0px #f7f7f7;
+    border-left: 1px solid lightgrey !important;
+    border-right: 1px solid lightgrey !important;
+    border-top: 3px solid #bde2d8 !important;
+    border-bottm: 0px !important;
+}
