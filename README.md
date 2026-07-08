@@ -1,48 +1,79 @@
-Contains the code for the assignments done as a part of the FT5010 class.
+Algorithmic Trading Systems
 
-Final group project
+This repository contains a collection of projects developed as part of the FT5010 – Algorithmic Trading Systems Design and Deployment course at the National University of Singapore (NUS). The projects explore key concepts in quantitative finance, portfolio optimisation, and systematic trading through Python-based implementations.
 
-Defensive Technical Analysis Trading Strategy
+The repository demonstrates the application of modern portfolio theory, vectorised backtesting, technical analysis strategies, and quantitative performance evaluation using real-world financial market data.
 
-A Python-based quantitative trading system that implements a defensive technical analysis strategy for a portfolio of six large-cap Indian information technology companies listed on the National Stock Exchange (NSE). The project combines multiple technical indicators to generate trading signals, incorporates practical risk management mechanisms, and evaluates its effectiveness through historical backtesting and benchmark comparisons. The strategy was developed as part of the FE5221 – Trading Principles & Fundamentals course at the National University of Singapore.
+Repository Contents
+1. Portfolio Optimisation using Mean-Variance Optimisation
 
-Project Overview
+Implementation of a quantitative portfolio optimisation framework based on Modern Portfolio Theory (MPT) using the PyPortfolioOpt library.
 
-The objective of this project is to design and evaluate a rule-based trading strategy capable of identifying profitable trading opportunities while limiting downside risk. Rather than relying on a single technical indicator, the strategy combines three widely used momentum and trend indicators:
+The project includes:
 
-Relative Strength Index (RSI) to identify overbought and oversold market conditions.
-Moving Average Convergence Divergence (MACD) to detect trend changes and momentum shifts.
-Stochastic Oscillator to evaluate price momentum relative to recent trading ranges.
+Mean-Variance Optimisation
+Efficient Frontier construction
+Sharpe Ratio maximisation
+Covariance shrinkage estimation
+Sector allocation constraints
+Portfolio optimisation across 15 Singapore Exchange (SGX) stocks
+Historical backtesting on unseen data
+Performance comparison under different investment strategies
 
-Trades are executed only when at least two of the three indicators agree on a buy or sell signal, reducing false positives and improving decision quality. Additionally, the strategy incorporates a market crash detection mechanism that temporarily suspends trading during periods of extreme market declines, providing an additional layer of risk protection.
+The implementation demonstrates how quantitative optimisation techniques can be used to construct diversified portfolios that maximise risk-adjusted returns while satisfying practical investment constraints.
 
-Portfolio
+2. Class-Based Vectorised Backtesting Framework
 
-The strategy is evaluated on an equally weighted portfolio consisting of six of India's largest publicly listed IT companies:
+An object-oriented implementation of a reusable backtesting engine for systematic trading strategies.
 
-Tata Consultancy Services (TCS)
-Infosys
-HCL Technologies
-Wipro
-LTIMindtree
-Tech Mahindra
+Key features include:
 
-These companies were selected due to their high liquidity, significant market capitalisation, and long historical price records, making them well suited for quantitative strategy development and backtesting.
+Class-based strategy implementation
+Vectorised backtesting for computational efficiency
+Moving Average crossover strategy
+Performance metric computation
+Portfolio value tracking
+Interactive visualisation using Dash
 
-Strategy Evaluation
+The project demonstrates how quantitative trading strategies can be evaluated efficiently using vectorised operations instead of iterative simulations.
 
-The trading strategy was initially backtested using historical market data from 2023 to optimise indicator parameters and validate trading rules. It was subsequently evaluated on unseen market data from 19 August 2024 to 15 November 2024 using an initial portfolio value of INR 1,000,000. Performance was compared against two benchmark approaches:
+3. Interactive Trading Strategy Dashboard
 
-A passive buy-and-hold portfolio with equal allocation across the six stocks.
-An equivalent investment in the Nifty50 index.
+A Python dashboard for analysing and evaluating technical trading strategies across multiple assets.
 
-The implementation also models realistic trading conditions by accounting for transaction costs and assessing performance using standard financial metrics such as returns, Sharpe Ratio, Sortino Ratio, Alpha, Beta, and portfolio volatility.
+The application provides:
 
-Key Highlights
-Multi-indicator technical trading strategy
-Consensus-based buy and sell signal generation
-Portfolio-level backtesting framework
-Crash detection and trading suspension mechanism
-Transaction cost modelling
-Benchmark comparison against passive investing and the Nifty50 index
-Performance evaluation using common quantitative finance metrics
+Interactive stock selection
+Configurable technical indicators
+Moving Average strategy evaluation
+Portfolio performance visualisation
+Strategy comparison
+Interactive charts and analytics using Dash
+
+The project focuses on providing an intuitive interface for exploring systematic trading strategies and analysing their historical performance.
+
+Technologies Used
+Python
+Pandas
+NumPy
+Matplotlib
+Plotly
+Dash
+PyPortfolioOpt
+yfinance
+Jupyter Notebook
+Key Concepts Demonstrated
+Modern Portfolio Theory (MPT)
+Efficient Frontier
+Sharpe Ratio Optimisation
+Portfolio Backtesting
+Vectorised Computation
+Object-Oriented Design
+Technical Analysis
+Moving Average Strategies
+Portfolio Performance Analysis
+Risk-Adjusted Return Evaluation
+Interactive Financial Data Visualisation
+Learning Outcomes
+
+These projects demonstrate the practical application of quantitative finance techniques to investment decision-making, ranging from portfolio optimisation and systematic trading strategy development to reusable backtesting frameworks and interactive financial analytics. Together, they illustrate the integration of financial theory with software engineering practices to build robust, data-driven trading and portfolio management solutions.
